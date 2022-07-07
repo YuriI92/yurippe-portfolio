@@ -17,7 +17,7 @@ function Nav(props) {
                             key={section}
                         >
                             {section === 'about' ? (
-                                <a href='about'>About Me</a>
+                                <a href='about' className={`text-decoration-none ${currentSection === section ? 'text-danger' : 'text-body'}`}>About Me</a>
                             ) : (
                                 <span onClick={() => setCurrentSection(section)}>
                                     {capFirstLetter(section)}
