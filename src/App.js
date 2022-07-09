@@ -26,8 +26,15 @@ function App() {
       />
       <main>
         <section>
-          <About />
-          <Project />
+          {(() => {
+            console.log(currentSection);
+            switch (currentSection) {
+              case 'about':
+                return <About />;
+              case 'portfolio':
+                return <Project />;
+            }
+          })()}
         </section>
         <h2 id='contact'>Contact</h2>
         <h2 id='resume'>Resume</h2>

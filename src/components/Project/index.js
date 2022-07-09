@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Project() {
+function Project({ currentSection }) {
     const [projects] = useState([
         {
             name: 'Deep Thoughts',
@@ -75,34 +75,32 @@ function Project() {
         },
     ]);
     const [currentProject, setCurrentProject] = useState();
-    
-    
-
-    return (
-        <div>
-            <h2>Portfolio</h2>
+        return (
             <div>
-                {projects.map(project => (
-                    <article>
-                        <img src={require(`/src/assets/project/${project.image}`)} alt={project.description} />
-                        <h3>
-                            <a href={project.url} target="_blank" rel="noopener noreferrer">                    
-                                {project.name}
-                            </a>
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">                    
-                                <i className='ri-github-fill'></i>
-                            </a>
-                        </h3>
-                        <ul>
-                            {project.technology.map(technology => (
-                                <li>{technology}</li>
-                            ))}
-                        </ul>
-                    </article>
-                ))}
+                <h2>Portfolio</h2>
+                <div>
+                    {projects.map(project => (
+                        <article key={project.name}>
+                            <img src={require(`/src/assets/project/${project.image}`)} alt={project.description} />
+                            <h3>
+                                <a href={project.url} target="_blank" rel="noopener noreferrer">                    
+                                    {project.name}
+                                </a>
+                                <a href={project.github} target="_blank" rel="noopener noreferrer">                    
+                                    <i className='ri-github-fill'></i>
+                                </a>
+                            </h3>
+                            <ul>
+                                {project.technology.map(technology => (
+                                    <li>{technology}</li>
+                                ))}
+                            </ul>
+                        </article>
+                    ))}
+                </div>
             </div>
-        </div>
-    );
+        );
+
 }
 
 export default Project;
