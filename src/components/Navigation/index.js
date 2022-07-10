@@ -8,7 +8,7 @@ function Nav(props) {
     } = props.props;
 
     return (
-        <nav className='mt-1 mt-sm-2'>
+        <nav className='mt-1 mx-2 mt-sm-2'>
             <ul className='d-flex flex-wrap justify-content-center justify-content-sm-end list-unstyled'>
                 {sections.map(section => {
                     return(

@@ -1,6 +1,7 @@
 .app {
   background: #FFC8C8;
   color: #3E4149;
+  font-size: 18px;
 }
 
 header {
@@ -14,8 +15,14 @@ footer > a {
   font-size: 9vw;
 }
 
+h2 {
+  text-align: center;
+  font-family: 'Lexend Giga', sans-serif;
+  font-size: 8vw;
+}
+
 nav {
-  font-size: 4vw;
+  font-size: 5vw;
   font-family: 'Lexend Giga', sans-serif;
 }
 
@@ -28,14 +35,23 @@ nav {
   nav {
     font-size: 2vw;
   }
+
+  h2 {
+    font-size: 4vw;
+  }
 }
 
 @media screen and (min-width: 1200px) {
+  h2,
   footer > a {
     font-size: 3vw;
   }
 
   nav {
     font-size: 2vw;
+  }
+
+  .app {
+    font-size: 20px;
   }
 }
