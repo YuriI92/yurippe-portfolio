@@ -2,7 +2,7 @@ import profilePic from '../../assets/profile/yurippe.jpg';
 
 function About() {
     return (
-        <div>
+        <section>
             <h2 id='about'>About Me</h2>
             <img src={profilePic} alt='Yuri Ichikawa' />
             <p>
@@ -15,7 +15,7 @@ function About() {
                 enim menandri, prima ignota denique et sea, nulla munere alienum sea at. Has luptatum pertinax 
                 evertitur at. At cum eius alterum nusquam, tollit eruditi has ex, in case dicam libris sed.
             </p>
-        </div>
+        </section>
     );
 }
 

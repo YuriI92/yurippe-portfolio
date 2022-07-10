@@ -7,6 +7,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import About from './components/About';
 import Project from './components/Project';
+import Contact from './components/Contact';
 
 function App() {
   const [sections] = useState([
@@ -25,19 +26,18 @@ function App() {
         setCurrentSection={setCurrentSection}
       />
       <main>
-        <section>
-          {(() => {
-            console.log(currentSection);
-            switch (currentSection) {
-              case 'about':
-                return <About />;
-              case 'portfolio':
-                return <Project />;
-            }
-          })()}
-        </section>
-        <h2 id='contact'>Contact</h2>
-        <h2 id='resume'>Resume</h2>
+        {(() => {
+          switch (currentSection) {
+            case 'about':
+              return <About />;
+            case 'portfolio':
+              return <Project />;
+            case 'contact':
+              return <Contact />;
+            // case 'resume':
+            //   return <Resume />;
+          }
+        })()}
       </main>
       <Footer />
     </div>

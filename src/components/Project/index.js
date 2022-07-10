@@ -1,7 +1,5 @@
-import { useState } from 'react';
-
-function Project({ currentSection }) {
-    const [projects] = useState([
+function Project() {
+    const projects = [
         {
             name: 'Deep Thoughts',
             technology: [
@@ -73,33 +71,34 @@ function Project({ currentSection }) {
             image: 'run-buddy.png',
             description: 'Run Buddy homepage screen capture saying Start Building Habits'
         },
-    ]);
-    const [currentProject, setCurrentProject] = useState();
-        return (
+    ];
+    // const [currentProject, setCurrentProject] = useState();
+
+    return (
+        <div>
+            <h2>Portfolio</h2>
             <div>
-                <h2>Portfolio</h2>
-                <div>
-                    {projects.map(project => (
-                        <article key={project.name}>
-                            <img src={require(`/src/assets/project/${project.image}`)} alt={project.description} />
-                            <h3>
-                                <a href={project.url} target="_blank" rel="noopener noreferrer">                    
-                                    {project.name}
-                                </a>
-                                <a href={project.github} target="_blank" rel="noopener noreferrer">                    
-                                    <i className='ri-github-fill'></i>
-                                </a>
-                            </h3>
-                            <ul>
-                                {project.technology.map(technology => (
-                                    <li>{technology}</li>
-                                ))}
-                            </ul>
-                        </article>
-                    ))}
-                </div>
+                {projects.map(project => (
+                    <article key={project.name}>
+                        <img src={require(`/src/assets/project/${project.image}`)} alt={project.description} />
+                        <h3>
+                            <a href={project.url} target="_blank" rel="noopener noreferrer">                    
+                                {project.name}
+                            </a>
+                            <a href={project.github} target="_blank" rel="noopener noreferrer">                    
+                                <i className='ri-github-fill'></i>
+                            </a>
+                        </h3>
+                        <ul>
+                            {project.technology.map(technology => (
+                                <li>{technology}</li>
+                            ))}
+                        </ul>
+                    </article>
+                ))}
             </div>
-        );
+        </div>
+    );
 
 }
 
