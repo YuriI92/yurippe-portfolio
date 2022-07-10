@@ -48,7 +48,7 @@ function Project({ currentSection }) {
             ],
             url: 'https://quiet-headland-91755.herokuapp.com/',
             github: 'https://github.com/YuriI92/yurilium-tech-blog',
-            image: 'yurillium-tech-blog.jpg',
+            image: 'yurillium-tech-blog.png',
             description: 'technology and network connection'
         },
         {
