@@ -4,7 +4,7 @@ function About() {
     return (
         <section>
             <h2 id='about'>About Me</h2>
-            <img src={profilePic} alt='Yuri Ichikawa' />
+            <img style={{width: '20px'}} src={profilePic} alt='Yuri Ichikawa' />
             <p>
                 Odio mucius quaerendum eu mea. Error fuisset antiopam ius ei, his commodo imperdiet in, id 
                 natum atomorum voluptatibus per. Mea ignota nostro ea, qui tollit torquatos persequeris cu. 

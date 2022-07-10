@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import './App.css';
+import './App.css'
 import 'remixicon/fonts/remixicon.css';
 
 // import components
@@ -20,7 +20,7 @@ function App() {
   const [currentSection, setCurrentSection] = useState(sections[0]);
 
   return (
-    <div>
+    <div className='app'>
       <Header 
         sections={sections}
         currentSection={currentSection}

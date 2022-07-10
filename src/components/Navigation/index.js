@@ -8,12 +8,12 @@ function Nav(props) {
     } = props.props;
 
     return (
-        <nav>
-            <ul>
+        <nav className='mt-1 mt-sm-2'>
+            <ul className='d-flex flex-wrap justify-content-center justify-content-sm-end list-unstyled'>
                 {sections.map(section => {
                     return(
                         <li 
-                            className={`${currentSection === section && 'text-danger'}`}
+                            className={`p-1 m-1 ${currentSection === section && 'text-danger'}`}
                             key={section}
                         >
                             {section === 'about' ? (
