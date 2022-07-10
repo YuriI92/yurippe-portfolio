@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import About from './components/About';
 import Project from './components/Project';
 import Contact from './components/Contact';
+import Resume from './components/Resume';
 
 function App() {
   const [sections] = useState([
@@ -34,8 +35,8 @@ function App() {
               return <Project />;
             case 'contact':
               return <Contact />;
-            // case 'resume':
-            //   return <Resume />;
+            case 'resume':
+              return <Resume />;
           }
         })()}
       </main>
