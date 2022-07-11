@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 function Project() {
     const projects = [
         {
@@ -72,7 +74,16 @@ function Project() {
             description: 'Run Buddy homepage screen capture saying Start Building Habits'
         },
     ];
-    // const [currentProject, setCurrentProject] = useState();
+    const [isHovered, setIsHovered] = useState('');
+
+    const handleEnter = prj => {
+        setIsHovered(prj);
+    }
+
+    const handleLeave = () => {
+        setIsHovered('');
+    }
+    console.log(isHovered);
 
     return (
         <section className='row'>
@@ -82,36 +93,45 @@ function Project() {
             <div className='col-12'>
                 <div className='row px-sm-3 px-lg-4'>
                     {projects.map(project => (
-                        <div className='col-12 col-sm-6'>
-                            <article key={project.name} className='prj my-3 card shadow'>
-                                <img 
-                                    src={require(`/src/assets/project/${project.image}`)} 
-                                    alt={project.description}
-                                    className='card-img' 
-                                />
-                                <div className='card-img-overlay p-3'>
-                                    <h3 className='card-title'>
-                                        <a 
-                                            href={project.url} 
-                                            target="_blank" rel="noopener noreferrer" 
-                                            className='p-1 align-middle'
-                                        >
-                                            {project.name}
-                                        </a>
-                                        <a 
-                                            href={project.github} 
-                                            target="_blank" rel="noopener noreferrer" 
-                                            className='prj-repo align-middle'
-                                        >
-                                            <i className='ri-github-fill'></i>
-                                        </a>
-                                    </h3>
-                                    <ul className='prj-tech card-text list-unstyled mx-3'>
-                                        {project.technology.map(technology => (
-                                            <li>{technology}</li>
-                                        ))}
-                                    </ul>
+                        <div key={project.name} className='col-12 col-sm-6'>
+                            <article 
+                                onMouseEnter={() => handleEnter(project.name)}
+                                onMouseLeave={() => handleLeave()}
+                                className='prj my-3 shadow'
+                            >
+                                <div>
+                                    <img 
+                                        src={require(`/src/assets/project/${project.image}`)} 
+                                        alt={project.description}
+                                        className='prj-image' 
+                                    />
+                                    <div className='prj-overlay'></div>
                                 </div>
+                                {isHovered === project.name ? (
+                                    <div className='prj-details fadeIn p-3'>
+                                        <h3>
+                                            <a 
+                                                href={project.url} 
+                                                target="_blank" rel="noopener noreferrer" 
+                                                className='p-1 align-middle text-decoration-none'
+                                            >
+                                                {project.name}
+                                            </a>
+                                            <a 
+                                                href={project.github} 
+                                                target="_blank" rel="noopener noreferrer" 
+                                                className='prj-repo align-middle text-decoration-none'
+                                            >
+                                                <i className='ri-github-fill'></i>
+                                            </a>
+                                        </h3>
+                                        <ul className='prj-tech list-unstyled mx-3'>
+                                            {project.technology.map(technology => (
+                                                <li key={technology}>{technology}</li>
+                                            ))}
+                                        </ul>
+                                    </div>
+                                ) : ('')}
                             </article>
                         </div>
                     ))}
