@@ -1,38 +1,163 @@
-.App {
+:root {
+  --primary: #FFC8C8;
+  --secondary: #FF9999;
+  --tertiary: #444F5A;
+  --quaternary: #3E4149;
+  --title-font: 'Lexend Giga', sans-serif;
+}
+
+header {
+  background: var(--secondary);
+}
+
+main {
+  min-height: 73vh;
+}
+
+footer {
+  background: var(--primary);
+  bottom: 0;
+}
+
+h1 > a,
+footer > a {
+  color: var(--tertiary);
+  font-family: var(--title-font);
+  font-size: 9vw;
+}
+
+h2 {
   text-align: center;
+  font-family: var(--title-font);
+  font-size: 8vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav,
+.nav-about {
+  font-size: 5vw;
+  font-family: var(--title-font);
+  color: var(--tertiary);
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.prj {
+  position: relative;
+}
+
+.prj .prj-overlay {
+  background: rgba(251, 222, 222, 0.7);
+  position: absolute;
+  /* fading initial value -> */
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  opacity: 0;
+  /* <- fading initial value */
+  -webkit-transition: all 0.4s ease-in-out 0s;
+  -moz-transition: all 0.4s ease-in-out 0s;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+.prj:hover .prj-overlay {
+  opacity: 1;
+}
+
+.prj-image {
+  width: 100%;
+  height: 65vw;
+  object-fit: cover;
+}
+
+.prj-details {
+  position: absolute;
+}
+
+.fadeIn {
+  top: 5%;
+}
+
+h3 > a {
+  font-size: 6.2vw;
+  font-family: var(--title-font);
+  color: var(--tertiary);
+}
+
+.prj-repo {
+  font-size: 10vw;
+}
+
+.prj-tech {
+  font-size: 4.5vw;
+}
+
+h3 {
+  font-size: 6.5vw;
+  font-family: var(--title-font);
+}
+
+button {
+  background: #a1a3a9;
+  border: 1px solid #7c7e84;
+  border-radius: 7px;
+  padding: 3px 10px;
+}
+
+button:hover {
+  background: var(--secondary);
+  border: 1px solid #fb7070;
+  color: #4c1e1e;
+}
+
+@media screen and (min-width: 768px) {
+  h1 > a,
+  footer > a {
+    font-size: 4.5vw;
+  }
+
+  nav,
+  .nav-about {
+    font-size: 2vw;
+  }
+
+  h2 {
+    font-size: 4vw;
+  }
+
+  .prj-image  {
+    height: 25vw;
+  }
+
+  h3 > a {
+    font-size: 3vw;
+    font-family: var(--title-font);
+    color: var(--tertiary);
+  }
+
+  h3 {
+    font-size: 3vw;
+  }
+  
+  .prj-repo {
+    font-size: 5vw;
+  }
+  
+  .prj-tech {
+    font-size: 1.8vw;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media screen and (min-width: 1200px) {
+  h2,
+  footer > a {
+    font-size: 3vw;
   }
-  to {
-    transform: rotate(360deg);
+
+  nav,
+  .nav-about {
+    font-size: 2vw;
+  }
+
+  .app {
+    font-size: 20px;
   }
 }
