@@ -87,6 +87,24 @@ h3 > a {
   font-size: 4.5vw;
 }
 
+h3 {
+  font-size: 6.5vw;
+  font-family: var(--title-font);
+}
+
+button {
+  background: #a1a3a9;
+  border: 1px solid #7c7e84;
+  border-radius: 7px;
+  padding: 3px 10px;
+}
+
+button:hover {
+  background: var(--secondary);
+  border: 1px solid #fb7070;
+  color: #4c1e1e;
+}
+
 @media screen and (min-width: 768px) {
   h1 > a,
   footer > a {
