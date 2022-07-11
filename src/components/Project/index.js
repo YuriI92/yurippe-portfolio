@@ -75,31 +75,50 @@ function Project() {
     // const [currentProject, setCurrentProject] = useState();
 
     return (
-        <div>
-            <h2>Portfolio</h2>
-            <div>
-                {projects.map(project => (
-                    <article key={project.name}>
-                        <img src={require(`/src/assets/project/${project.image}`)} alt={project.description} />
-                        <h3>
-                            <a href={project.url} target="_blank" rel="noopener noreferrer">                    
-                                {project.name}
-                            </a>
-                            <a href={project.github} target="_blank" rel="noopener noreferrer">                    
-                                <i className='ri-github-fill'></i>
-                            </a>
-                        </h3>
-                        <ul>
-                            {project.technology.map(technology => (
-                                <li>{technology}</li>
-                            ))}
-                        </ul>
-                    </article>
-                ))}
+        <section className='row'>
+            <h2 className='col-12 d-sm-flex py-1'>
+                Portfolio
+            </h2>
+            <div className='col-12'>
+                <div className='row px-sm-3 px-lg-4'>
+                    {projects.map(project => (
+                        <div className='col-12 col-sm-6'>
+                            <article key={project.name} className='prj my-3 card shadow'>
+                                <img 
+                                    src={require(`/src/assets/project/${project.image}`)} 
+                                    alt={project.description}
+                                    className='card-img' 
+                                />
+                                <div className='card-img-overlay p-3'>
+                                    <h3 className='card-title'>
+                                        <a 
+                                            href={project.url} 
+                                            target="_blank" rel="noopener noreferrer" 
+                                            className='p-1 align-middle'
+                                        >
+                                            {project.name}
+                                        </a>
+                                        <a 
+                                            href={project.github} 
+                                            target="_blank" rel="noopener noreferrer" 
+                                            className='prj-repo align-middle'
+                                        >
+                                            <i className='ri-github-fill'></i>
+                                        </a>
+                                    </h3>
+                                    <ul className='prj-tech card-text list-unstyled mx-3'>
+                                        {project.technology.map(technology => (
+                                            <li>{technology}</li>
+                                        ))}
+                                    </ul>
+                                </div>
+                            </article>
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
-
 }
 
 export default Project;

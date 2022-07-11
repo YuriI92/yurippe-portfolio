@@ -26,7 +26,7 @@ function App() {
         currentSection={currentSection}
         setCurrentSection={setCurrentSection}
       />
-      <main>
+      <main className='container py-4'>
         {(() => {
           switch (currentSection) {
             case 'about':

@@ -1,29 +1,60 @@
+:root {
+  --primary: #FFC8C8;
+  --secondary: #FF9999;
+  --tertiary: #444F5A;
+  --quaternary: #3E4149;
+  --title-font: 'Lexend Giga', sans-serif;
+}
+
 .app {
-  background: #FFC8C8;
-  color: #3E4149;
+  background: var(--primary);
+  color: var(--quaternary);
   font-size: 18px;
 }
 
 header {
-  background: #FF9999;
+  background: var(--secondary);
 }
 
 h1 > a,
 footer > a {
-  color: #444F5A;
-  font-family: 'Lexend Giga', sans-serif;
+  color: var(--tertiary);
+  font-family: var(--title-font);
   font-size: 9vw;
 }
 
 h2 {
   text-align: center;
-  font-family: 'Lexend Giga', sans-serif;
+  font-family: var(--title-font);
   font-size: 8vw;
 }
 
-nav {
+nav,
+.nav-about {
   font-size: 5vw;
-  font-family: 'Lexend Giga', sans-serif;
+  font-family: var(--title-font);
+  color: var(--tertiary);
+}
+
+
+.prj > img {
+  width: 100%;
+  height: 65vw;
+  object-fit: cover;
+}
+
+h3 > a {
+  font-size: 6.2vw;
+  font-family: var(--title-font);
+  color: var(--tertiary);
+}
+
+.prj-repo {
+  font-size: 10vw;
+}
+
+.prj-tech {
+  font-size: 4.5vw;
 }
 
 @media screen and (min-width: 768px) {
@@ -32,12 +63,31 @@ nav {
     font-size: 4.5vw;
   }
 
-  nav {
+  nav,
+  .nav-about {
     font-size: 2vw;
   }
 
   h2 {
-    font-size: 4vw;
+    font-size: 3vw;
+  }
+
+  .prj > img {
+    height: 25vw;
+  }
+
+  h3 > a {
+    font-size: 3vw;
+    font-family: var(--title-font);
+    color: var(--tertiary);
+  }
+  
+  .prj-repo {
+    font-size: 5vw;
+  }
+  
+  .prj-tech {
+    font-size: 1.8vw;
   }
 }
 
@@ -47,7 +97,8 @@ nav {
     font-size: 3vw;
   }
 
-  nav {
+  nav,
+  .nav-about {
     font-size: 2vw;
   }
 
