@@ -6,13 +6,6 @@
   --title-font: 'Lexend Giga', sans-serif;
 }
 
-body {
-  margin: 0px;
-  background: var(--primary);
-  color: var(--quaternary);
-  font-size: 18px;
-}
-
 header {
   background: var(--secondary);
 }
