@@ -37,6 +37,8 @@ function App() {
               return <Contact />;
             case 'resume':
               return <Resume />;
+            default:
+              return <About />;
           }
         })()}
       </main>
