@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/static/css/main.95adf196.css",
+    "main.js": "/static/js/main.a95c3391.js",
+    "static/media/remixicon.svg?t=1590207869815": "/static/media/remixicon.9cedd2150922ead84869.svg",
+    "static/media/music-slayers.png": "/static/media/music-slayers.2ea5b7891482af4ef5e4.png",
+    "static/media/run-buddy.png": "/static/media/run-buddy.f58c335d2dd23b7c3506.png",
+    "static/media/yurippe.jpg": "/static/media/yurippe.59aa9180055d70e1d62c.jpg",
+    "static/media/remixicon.eot?t=1590207869815": "/static/media/remixicon.5cb99e6cba5a4619063f.eot",
+    "static/media/remixicon.ttf?t=1590207869815": "/static/media/remixicon.f2616f597cf98f38d234.ttf",
+    "static/media/remixicon.woff?t=1590207869815": "/static/media/remixicon.8d09fa11700ed63cf96e.woff",
+    "static/media/remixicon.woff2?t=1590207869815": "/static/media/remixicon.90668f6f9b3c2c18a090.woff2",
+    "static/media/yurippe-budgetracker.png": "/static/media/yurippe-budgetracker.e7443c2494650bfc3f89.png",
+    "static/media/dev-commerce.png": "/static/media/dev-commerce.830c6504fd2cba6af78f.png",
+    "static/media/yurillium-tech-blog.png": "/static/media/yurillium-tech-blog.e3af6e94fbebc7788fce.png",
+    "static/media/deep-thoughts.png": "/static/media/deep-thoughts.74b650076e69bbec3497.png",
+    "index.html": "/index.html",
+    "main.95adf196.css.map": "/static/css/main.95adf196.css.map",
+    "main.a95c3391.js.map": "/static/js/main.a95c3391.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.95adf196.css",
+    "static/js/main.a95c3391.js"
+  ]
+}
