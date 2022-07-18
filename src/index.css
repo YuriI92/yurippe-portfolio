@@ -15,9 +15,9 @@ code {
     monospace;
 }
 
-@font-face {
+/* @font-face {
   font-family: 'Lexend Giga';
   font-style: normal;
   font-weight: 400;
   src: local('Lexend Giga'), url('https://fonts.cdnfonts.com/s/29951/LexendGiga-Regular.woff') format('woff');
-}
+} */
