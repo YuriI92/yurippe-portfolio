@@ -3,14 +3,16 @@ import { useState } from 'react';
 function Project() {
     const projects = [
         {
-            name: 'Deep Thoughts',
+            name: 'Most to Coast',
             technology: [
-                'MERN Stack'
+                'MERN',
+                'Bootstrap',
+                'Apollo'
             ],
-            url: 'https://morning-coast-59682.herokuapp.com/',
-            github: 'https://github.com/YuriI92/deep-thoughts',
-            image: 'deep-thoughts.png',
-            description: 'Deep Thoughts home page screen capture'
+            url: 'https://peaceful-journey-57215.herokuapp.com/',
+            github: 'https://github.com/utorproj3/Most_to_Coast',
+            image: 'most-to-coast.png',
+            description: 'Most to Cast main page screen capture'
         },
         {
             name: 'dEv-Commerce',
@@ -83,7 +85,6 @@ function Project() {
     const handleLeave = () => {
         setIsHovered('');
     }
-    console.log(isHovered);
 
     return (
         <section className='row'>

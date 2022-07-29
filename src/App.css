@@ -44,7 +44,7 @@ nav,
 }
 
 .prj .prj-overlay {
-  background: rgba(251, 222, 222, 0.7);
+  background: rgba(68, 79, 90, 0.7);
   position: absolute;
   /* fading initial value -> */
   left: 0;
@@ -70,16 +70,21 @@ nav,
 
 .prj-details {
   position: absolute;
+  color: var(--primary);
 }
 
 .fadeIn {
   top: 5%;
 }
 
-h3 > a {
-  font-size: 6.2vw;
+.prj-details a {
+  font-size: 2.5vw;
   font-family: var(--title-font);
-  color: var(--tertiary);
+  color: var(--primary);
+}
+
+.prj-details a:hover {
+  color: var(--secondary);
 }
 
 .prj-repo {
